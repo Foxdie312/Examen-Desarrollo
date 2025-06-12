@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto - Zapatos Retro</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body class="bg-white text-gray-700 font-sans min-h-screen flex flex-col">
+
+  <div id="app" class="max-w-5xl mx-auto px-6 py-16 flex flex-col min-h-screen">
+    
+    <header class="sticky top-0 z-30 bg-white shadow-sm flex justify-between items-center py-4 mb-12">
+      <div class="text-3xl font-extrabold text-blue-700 select-none tracking-tight cursor-default">
+        Zapatos Retro
+      </div>
+      <nav class="space-x-8 text-gray-600 font-medium text-base">
+        <a href="/pagina zapatos/html/Inicio.html" class="hover:text-blue-700 transition-colors duration-300">Inicio</a>
+        <a href="" class="hover:text-blue-700 transition-colors duration-300">Catálogo</a>
+        <a href="/pagina zapatos/html/Contacto.html" class="font-semibold text-blue-700 underline decoration-blue-300">Contacto</a>
+        <a href="/pagina zapatos/html/Login.html" class="hover:text-blue-700 transition-colors duration-300">Login</a>
+      </nav>
+    </header>
+
+    
+    <section class="mb-16 text-center max-w-3xl mx-auto">
+      <h1 class="text-5xl font-extrabold text-gray-900 leading-tight mb-6 select-none">
+        Contacta con Zapatos Retro
+      </h1>
+      <p class="text-lg text-gray-600">
+        En caso de algún inconveniente o consulta, aquí tienes varias formas de contacto con nuestra empresa. 
+        Estamos atentos para ayudarte con cualquier duda o solicitud.
+      </p>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="grid gap-12 sm:grid-cols-3">
+      
+      <!-- Teléfono -->
+      <article class="bg-white rounded-3xl p-8 shadow-md flex flex-col items-center text-center select-none hover:shadow-xl transition-shadow duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mb-4 stroke-blue-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75v10.5a2.25 2.25 0 002.25 2.25H7.5a2.25 2.25 0 002.25-2.25V7.5a2.25 2.25 0 00-2.25-2.25H4.5A2.25 2.25 0 002.25 6.75z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 8.25h.008v.008H6V8.25z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25h7.5m-7.5 3h5.25" />
+        </svg>
+        <h2 class="text-xl font-semibold text-gray-900 mb-2">Teléfono</h2>
+        <p class="text-gray-600 text-base">+34 912 345 678</p>
+      </article>
+
+      <!-- Email -->
+      <article class="bg-white rounded-3xl p-8 shadow-md flex flex-col items-center text-center select-none hover:shadow-xl transition-shadow duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mb-4 stroke-blue-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 12v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.689l4.5 3.375 4.5-3.375" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.689v-1.439A2.25 2.25 0 019.75 5.25h4.5a2.25 2.25 0 012.25 2v1.439" />
+        </svg>
+        <h2 class="text-xl font-semibold text-gray-900 mb-2">Correo Electrónico</h2>
+        <p class="text-gray-600 text-base">contacto@zapatosretro.com</p>
+      </article>
+
+      <!-- Redes Sociales -->
+      <article class="bg-white rounded-3xl p-8 shadow-md flex flex-col items-center text-center select-none hover:shadow-xl transition-shadow duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mb-4 stroke-blue-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path d="M18.75 2.25h-3a6 6 0 00-6 6v3a6 6 0 006 6h3a6 6 0 006-6v-3a6 6 0 00-6-6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25v1.5M9 11.25v1.5" />
+        </svg>
+        <h2 class="text-xl font-semibold text-gray-900 mb-2">Redes Sociales</h2>
+        <p class="text-gray-600 text-base mb-2">Síguenos en nuestras redes para mantenerte informado</p>
+        <div class="flex space-x-6">
+          <a href="#" aria-label="Facebook" class="text-blue-700 hover:text-blue-900 transition-colors duration-300" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.5 9.9v-7h-3v-3h3v-2a4 4 0 014-4h3v3h-3a1 1 0 00-1 1v2h4l-1 3h-3v7A10 10 0 0022 12z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="text-pink-600 hover:text-pink-900 transition-colors duration-300" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5A3.75 3.75 0 0020 16.25v-8.5A3.75 3.75 0 0016.25 4h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6zm4.75-3a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter" class="text-blue-500 hover:text-blue-700 transition-colors duration-300" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14.86A4.48 4.48 0 0022.4.4a9.12 9.12 0 01-2.88 1.1A4.52 4.52 0 0016.31 0a4.5 4.5 0 00-4.37 5.52A12.79 12.79 0 013 1.3S-1 12.3 7 15.4a13 13 0 01-7 2c9.16 5.56 20 0 20-11.5a4.5 4.5 0 00-.13-.96A7.72 7.72 0 0023 3z"/></svg>
+          </a>
+        </div>
+      </article>
+
+    </section>
+
+    <!--pie de página-->
+    <footer class="mt-auto py-12 text-center text-gray-400 text-sm select-none border-t border-gray-100">
+      © 2023 Zapatos Retro. Todos los derechos reservados.
+    </footer>
+  </div>
+
+</body>
+</html>
+
