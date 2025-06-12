@@ -12,7 +12,7 @@
   <div id="app" class="flex-grow flex flex-col justify-center items-center px-4 max-w-md mx-auto py-16">
 
     
-    <a href="/pagina zapatos/html/inicio.html" class="absolute top-4 left-4 text-blue-700 font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">
+    <a href="/pagina zapatos/html/PáginaPrincipal/Inicio.html" class="absolute top-4 left-4 text-blue-700 font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">
       ← Volver a Inicio
     </a>
     
@@ -63,32 +63,33 @@
   
 <script>
 new Vue({
-    el: '#app',
-    data: {
-      username: '',
-      password: '',
-      error: ''
-    },
-    methods: {
-      handleLogin() {
-        // Simple demo validation, no backend integration.
-        this.error = '';
-        if(!this.username.trim()) {
-          this.error = 'Por favor, ingresa el nombre de usuario.';
-          return;
-        }
-        if(!this.password) {
-          this.error = 'Por favor, ingresa la contraseña.';
-          return;
-        }
-        // Aquí podrías agregar lógica real de autenticación.
-        alert(`Bienvenido, ${this.username}!`);
-        // Simulamos redirección a inicio:
-        window.location.href = "index.html";
+  el: '#app',
+  data: {
+    username: '',
+    password: '',
+    error: ''
+  },
+  methods: {
+    handleLogin() {
+      
+      this.error = '';
+      if(!this.username.trim()) {
+        this.error = 'Por favor, ingresa el nombre de usuario.';
+        return;
+      }
+      if(!this.password) {
+        this.error = 'Por favor, ingresa la contraseña.';
+        return;
+      }
+      
+      alert(`Bienvenido, ${this.username}!`);
+      
+      window.location.href = "index.html";
       }
     }
-  }) 
-  </script>
+  }
+)
+</script>
 
 </body>
 </html>

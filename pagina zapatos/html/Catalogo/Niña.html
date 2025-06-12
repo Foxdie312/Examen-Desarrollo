@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zapatos Retro - Niña</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body class="bg-white text-gray-700 font-sans min-h-screen flex flex-col">
+
+  <div id="app" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col min-h-screen">
+
+
+    <header class="sticky top-0 bg-white z-30 shadow-sm flex justify-between items-center py-4 px-4 sm:px-0 mb-12">
+      <div class="text-3xl font-extrabold text-blue-700 select-none tracking-tight cursor-default">
+        Zapatos Retro
+      </div>
+      <nav class="space-x-8 text-gray-600 font-medium text-base">
+        <a href="/pagina zapatos/html/PáginaPrincipal/Inicio.html" class="hover:text-blue-700 transition-colors duration-300">Inicio</a>
+        <div class="inline-block relative">
+          <button @click="toggleMenu"
+            class="flex items-center space-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500 px-2 py-1 rounded-md hover:text-blue-700 transition-colors duration-300">
+            <span>Catálogo</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div v-show="isMenuOpen" @click.away="isMenuOpen = false" 
+               class="absolute right-0 mt-2 w-40 origin-top-right rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50"
+               style="display: none;">
+            <a href="/pagina zapatos/html/Catalogo/Hombre.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors duration-200">Hombre</a>
+            <a href="/pagina zapatos/html/Catalogo/Mujer.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors duration-200">Mujer</a>
+            <a href="/pagina zapatos/html/Catalogo/Niño.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors duration-200">Niño</a>
+            <a href="/pagina zapatos/html/Catalogo/Niña.html" class="block px-4 py-2 text-blue-700 font-semibold bg-blue-50 cursor-default select-none">Niña</a>
+          </div>
+        </div>
+        <a href="/pagina zapatos/html/PáginaPrincipal/Contacto.html" class="hover:text-blue-700 transition-colors duration-300">Contacto</a>
+        <a href="/pagina zapatos/html/PáginaPrincipal/Login.html" class="hover:text-blue-700 transition-colors duration-300">Login</a>
+      </nav>
+    </header>
+
+    
+    <main class="flex-grow">
+      <h1 class="text-4xl font-extrabold text-gray-900 mb-12 select-none text-center">Zapatos para Niña</h1>
+      <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-16">
+        <article v-for="(zapato, index) in zapatos" :key="index" class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300 select-none flex flex-col items-center text-center">
+          <img :src="zapato.image" :alt="zapato.name + ' - Imagen'" class="w-48 h-48 object-contain mb-5" loading="lazy" />
+          <h2 class="text-xl font-semibold text-gray-900 mb-2">{{ zapato.name }}</h2>
+          <p class="text-gray-600 mb-4 text-sm">{{ zapato.description }}</p>
+          <span class="font-bold text-blue-700 text-lg">${{ zapato.price }}</span>
+        </article>
+      </section>
+    </main>
+
+    
+    <footer class="py-8 text-center text-gray-500 text-sm select-none border-t border-gray-100 mt-auto">
+      © 2023 Zapatos Retro. Todos los derechos reservados.
+    </footer>
+  </div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      isMenuOpen: false,
+      zapatos: [
+        {
+          name: "Sandalias Vintage Niña",
+          description: "Coloridas y cómodas para jugar y caminar.",
+          price: "38.50",
+          image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          name: "Zapatos de Lazo",
+          description: "Elegantes con detalle de lazo para ocasiones especiales.",
+          price: "45.00",
+          image: "https://images.unsplash.com/photo-1506459225024-1428097a7e18?auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          name: "Botas Retro Niña",
+          description: "Para los días frescos con mucho estilo retro.",
+          price: "50.25",
+          image: "https://images.unsplash.com/photo-1513708928677-4d5ecfb8541c?auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          name: "Tenis Casual Niña",
+          description: "Versátiles para todos sus días activos.",
+          price: "42.00",
+          image: "https://images.unsplash.com/photo-1554118811-1e870c275e42?auto=format&fit=crop&w=400&q=80"
+        }
+      ]
+    },
+    methods: {
+      toggleMenu() {
+        this.isMenuOpen = !this.isMenuOpen;
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
