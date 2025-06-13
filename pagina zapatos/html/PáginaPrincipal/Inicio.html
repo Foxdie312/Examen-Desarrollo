@@ -36,7 +36,7 @@
   
   <header class="sticky top-0 z-30 bg-white shadow-sm flex justify-between items-center py-4 px-4 sm:px-0">
     <div class="text-3xl font-extrabold text-blue-700 select-none tracking-tight">
-      Zapatos Retro
+      ZapatosTooi
     </div>
     <nav class="space-x-8 text-gray-600 font-medium text-base">
       <a href="/pagina zapatos/html/PáginaPrincipal/Inicio.html" class="hover:text-blue-700 transition-colors duration-300">Inicio</a>
@@ -61,15 +61,17 @@
       </div>
       <a href="/pagina zapatos/html/PáginaPrincipal/Contacto.html" class="hover:text-blue-700 transition-colors duration-300">Contacto</a>
       <a href="/pagina zapatos/html/PáginaPrincipal/Login.html" class="hover:text-blue-700 transition-colors duration-300">Login</a>
+      <a href="/pagina zapatos/html/PáginaPrincipal/Usuario.html" class="hover:text-blue-700 transition-colors duration-300">Usuario</a>
     </nav>
   </header>
 
   <main class="flex-grow pt-16 pb-8">
     <h1 class="text-5xl font-extrabold text-center text-gray-900 leading-tight mb-16 select-none">
-      Bienvenido a nuestra tienda de zapatos retro
+      Bienvenido a nuestra tienda de ZapatosTooi, Consigue los mejores Zapatos
     </h1>
     <p class="text-center max-w-3xl mx-auto text-lg text-gray-600 mb-24">
-      Descubre nuestra exclusiva colección de zapatos para hombre, mujer, niño y niña, con el auténtico estilo retro que amarás.
+      Descubre nuestra exclusiva colección de zapatos para hombre, mujer, niño y niña, con el auténtico estilo que deaseas
+      con el que amarás.
     </p>
     
   </main>
@@ -126,7 +128,7 @@
 
   
   <footer class="py-8 text-center text-gray-500 text-sm select-none border-t border-gray-100">
-    © 2025 Zapatos Retro. Todos los derechos reservados.
+    © 2025 ZapatosTooi. Todos los derechos reservados.
   </footer>
 
 </div>
@@ -139,35 +141,29 @@
       isMenuOpen: false,
       zapatos: [
         {
-          name: "Zapato Retro Hombre",
-          description: "Elegante y cómodo, ideal para tu estilo vintage.",
-          price: "59.99",
-          image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=400&q=80"
+          name: "Zapato de Hombre Clasico",
+          description: "Elegante y cómodo, ideal para tu estilo personal.",
+          price: "89100",
+          image: "imagenes/clasico.jpg"
         },
         {
           name: "Zapato Vintage Mujer",
           description: "Perfecto para looks clásicos y sofisticados.",
-          price: "72.50",
-          image: "https://images.unsplash.com/photo-1519741494342-3c9805f8a116?auto=format&fit=crop&w=400&q=80"
+          price: "99100",
+          image: "imagenes/tacones.jpg"
         },
         {
-          name: "Zapato Niños Retro",
+          name: "Zapato Niños",
           description: "Confort y diseño para los más pequeños.",
-          price: "45.00",
-          image: "https://images.unsplash.com/photo-1475180093035-5347d57e1ac4?auto=format&fit=crop&w=400&q=80"
+          price: "66900",
+          image: "imagenes/botas.jpg"
         },
         {
           name: "Zapato Niña Vintage",
           description: "Detalles adorables para acompañar su estilo.",
-          price: "50.75",
-          image: "https://images.unsplash.com/photo-1504482164657-4f5f1819fd4a?auto=format&fit=crop&w=400&q=80"
+          price: "45900",
+          image: "imagenes/sandalias.jpg"
         },
-        {
-          name: "Zapato Clásico Unisex",
-          description: "Elegancia atemporal para cualquier ocasión.",
-          price: "69.99",
-          image: "https://images.unsplash.com/photo-1509316785289-efbaf47e99b5?auto=format&fit=crop&w=400&q=80"
-        }
       ],
       currentIndex: 0,
     },
@@ -198,7 +194,7 @@
         }
       },
       handleResize() {
-        // Adjust currentIndex if out of bounds after resize
+        
         if(this.currentIndex > this.zapatos.length - this.visibleItems) {
           this.currentIndex = Math.max(0, this.zapatos.length - this.visibleItems);
         }
